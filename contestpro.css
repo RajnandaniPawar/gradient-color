@@ -1,0 +1,29 @@
+
+    h2{
+        color: white;
+    }
+.container {
+    /* text-align: center; */
+    margin-top: 50px;
+}
+
+.counter {
+    font-size: 36px;
+    margin-bottom: 20px;
+    /* background: black; */
+
+}
+
+.btn {
+    margin: 0 10px;
+    /* color: white; */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
