@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #b07aecb8;
+}
+
+.buttons{
+    margin: 50px;
+}
+
+.buttons button{
+    background: #8726f5b8;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#ToastBox{
+    /* background: #b4e870; */
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    position: absolute;
+    padding: 20px;
+
+}
+
+.toast{
+    width: 350px;
+    height: 70px;
+    background: #fff;
+    color: #8726f5b8;
+    font-weight: 400;
+    margin: 12px 0;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation:  moveleft 0.5s linear forwards;
+}
+@keyframes moveleft{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.toast i{
+    margin: 0 20px;
+    font-size: 25px;
+    color: #8726f5b8;
+
+}
+
+.toast.erroe.i{
+    color: red;
+}
+.toast.Invaild.i{
+    color: rgb(244, 244, 66);
+}
+
+.toast::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: #8726f5b8;
+    animation:  anim 5s linear forwards;
+}
+@keyframes anim{
+    100%{
+        width: 0;
+    }
+}
+
+.toast.error::after{
+    background: red;
+}
+.toast.Invaild::after{
+      background: rgb(244, 244, 66);
+}
